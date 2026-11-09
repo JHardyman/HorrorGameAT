@@ -1,0 +1,29 @@
+{
+    "name": "Unity.PlatformToolkit.PS5.InputSystem",
+    "rootNamespace": "Unity.PlatformToolkit.PS5.InputSystem",
+    "references": [
+        "GUID:f04caea560db23843b70f5b24fba7cf2",
+        "GUID:cd5e5d7edbf806b4aa5c04910bdd8adf"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "PS5"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_PS5",
+        "PS5_INPUT_SYSTEM_AVAILABLE"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem.ps5",
+            "expression": "",
+            "define": "PS5_INPUT_SYSTEM_AVAILABLE"
+        }
+    ],
+    "noEngineReferences": false
+}

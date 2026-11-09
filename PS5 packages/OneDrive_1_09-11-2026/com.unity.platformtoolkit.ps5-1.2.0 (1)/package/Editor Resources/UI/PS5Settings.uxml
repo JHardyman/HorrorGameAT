@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:GroupBox class="section">
+        <ui:IntegerField label="Allocated save size (KiB)" value="3072" tooltip="Size of saves in KiB. Every save created via &quot;ISavingSystem.OpenSaveWritable&quot; will be allocated to this size on PS5. There is no way currently to set the save size at runtime." is-delayed="true">
+            <Bindings>
+                <ui:DataBinding property="value" data-source-path="AllocatedSaveSize" binding-mode="TwoWay" />
+            </Bindings>
+        </ui:IntegerField>
+    </ui:GroupBox>
+</ui:UXML>

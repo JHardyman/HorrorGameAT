@@ -1,0 +1,35 @@
+{
+    "name": "Unity.InputSystem.PS5",
+    "rootNamespace": "",
+    "references": [
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "PS5"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.6.0",
+            "define": "UNITY_INPUT_SYSTEM_CAN_SET_RUN_IN_BACKGROUND"
+        },
+        {
+            "name": "Unity",
+            "expression": "6000.0.0b12",
+            "define": "UNITY_PS5_ENHANCED_INPUT_SYSTEM"
+        },
+        {
+            "name": "Unity",
+            "expression": "6000.1.0a5",
+            "define": "UNITY_SUPPORT_ANGVEL_DEADBAND_STATE"
+        }
+    ],
+    "noEngineReferences": false
+}

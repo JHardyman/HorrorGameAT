@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Best practices and considerations | PS5 Audio Spatializer Plugin </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Best practices and considerations | PS5 Audio Spatializer Plugin ">
+      <meta name="generator" content="docfx 2.70.0 via com.unity.package-manager-doctools@3.9.3-preview on Monday, July 20, 2026">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/icons.css">
+      <link rel="stylesheet" href="../styles/unity.legal.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+      <meta property="unity:packageID" content="com.unity.spatializer.ps5">
+      <meta property="unity:packageTitle" content="PS5 Audio Spatializer Plugin | 0.0.22-preview">
+      <meta property="unity:copyTitle" content="Copy">
+      <meta property="unity:copyConfirmMessage" content="Copied">
+      <meta property="unity:copyIcon" content="">
+      <meta property="unity:copyConfirmIcon" content="">
+    
+    
+    <meta property="docfx:newtab" content="true">
+    <meta property="docfx:newtab" content="true">
+    <meta property="unity:image-zoom-threshold" content="1200">
+      <script type="text/javascript">thisPackageMetaData = { name: "com.unity.spatializer.ps5", version: "0.0.22-preview", displayTitle:"PS5 Audio Spatializer Plugin 0.0.22-preview", lang: "en" };</script>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+                <div class="back-to-unity-group">
+                  <a class="back-to-unity" href="">docs.unity3d.com</a>
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../manual/index.html" title="Manual">Manual</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="Scripting API">Scripting API</a>
+                      </li>
+                      <li>
+                          <a href="../changelog/CHANGELOG.html" title="Changelog">Changelog</a>
+                      </li>
+                      <li>
+                          <a href="../license/LICENSE.html" title="License">License</a>
+                      </li>
+                </ul>            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="index.html" title="PS5 spatializer plug-in" class="">PS5 spatializer plug-in</a>
+                    </li>
+                    <li class="">
+                      <a href="gettingstarted.html" title="Getting started" class="">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="sample.html" title="Using the sample project" class="">Using the sample project</a>
+                    </li>
+                    <li class="active">
+                      <a href="bestpractices.html" title="Best practices and considerations" class="active">Best practices and considerations</a>
+                    </li>
+                  </ul>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="best-practices-and-considerations">Best practices and considerations</h1>
+
+<p>This section outlines best practices and additional considerations when using the Unity PS5 Spatializer Plug-in.</p>
+<h2 id="select-audio-to-spatialize">Select audio to spatialize</h2>
+<p>When working with spatialized audio, it’s best to decide early in the build process which audio sources you wish the player to experience in the 3D audio space. For example, diegetic sounds such as character dialogue or an enemy's footsteps work well in the 3D audio space. In contrast, non-diegetic sounds such as music and UI sounds don’t. Also, consider the number of sources that you want to spatialize. For example, spatializing the sound of a small number of approaching enemies can add extra suspense in a horror game. However, if a swarm of enemies is approaching, each audio source would not provide the player with any additional audible information and be a resource heavy operation to run.</p>
+<h2 id="positioning-the-audio-source-in-3d-space">Positioning the audio source in 3D space</h2>
+<p>3D audio adds the element of height to a player's experience of game audio. With this, consider the placement of the source of any new or existing audio emitting from a GameObject. For example, if adding 3D audio to a project, ensure that character dialogue plays from the character model's head rather than another location on their body.</p>
+<h2 id="additional-considerations">Additional considerations</h2>
+<p>Some configurations may produce a different output in the Editor than on a PS5 device.
+For example, when using the Spatial Blend property on a PS5 device, it’s important to note that a separate system is handling the spatialization of the 3D portion of the audio. As this system isn't present when testing in the Editor, you might end up creating setups that don't produce the same sound in the Editor that's produced on a PS5.</p>
+<p>Since the sound in the Editor is only an approximation, you must test your mixer and 3D audio source setups on an actual PS5 device.</p>
+<h2 id="mixer-setup-example">Mixer setup example</h2>
+<p>This example displays a separate subgroup in the mixer dedicated for spatialized audio sources, and the reverb effect used for those sources is on that channel. Other non-spatialized audio sources are routed to the effects subgroup, where more complex effects could be applied.</p>
+<p><img src="images/mixersetup.png" alt=""></p>
+<h2 id="limitations">Limitations</h2>
+<h3 id="number-of-spatialized-audio-sources">Number of spatialized audio sources</h3>
+<p>When using the PS5 spatializer plug-in, a maximum of 64 audio sources can be spatialized at any time. To add support for a larger number of audio sources, increase the variable <code>kMaxObjectChannels</code> in <code>Plugin_Spatializer.cpp</code>. You must recompile the plugin after any source code change.</p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="onetrust-inset">
+        
+      	
+      	Copyright © 2026 Unity Technologies &mdash; <a href="https://docs.unity3d.com/Manual/TermsOfUse.html">Trademarks and terms of use</a><br>
+              <ul class="unity-footer-menu-legal">
+                <li><a href="https://unity.com/legal">Legal</a></li>
+                <li><a href="https://unity.com/legal/privacy-policy">Privacy Policy</a></li>
+                <li><a href="https://unity.com/legal/cookie-policy">Cookie Policy</a></li>
+                <li><a href="https://unity.com/legal/do-not-sell-my-personal-information">Do Not Sell or Share My Personal Information</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="../styles/PMDT.js"></script>
+    <script type="text/javascript" src="../styles/mermaid.min.js"></script>
+    <script type="module">
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script id="MathJax-script" async="" src="../styles/mathjax/tex-chtml.js"></script>  </body>
+</html>

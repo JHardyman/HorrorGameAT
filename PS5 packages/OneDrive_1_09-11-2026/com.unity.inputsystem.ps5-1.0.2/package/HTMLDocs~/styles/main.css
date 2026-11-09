@@ -1,0 +1,78 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.collapsible {
+    cursor: pointer;
+}
+
+.collapsible div {
+  padding: 0 18px;
+  display: block;
+  overflow: hidden;
+}
+
+.collapsible.closed div {
+    display: none;
+}
+.initial {
+    display: block !important;
+}
+.collapsible.closed h5::before {
+    content: "+ ";
+    font-size: 1.2em;
+}
+.collapsible h5::before {
+    content: "- ";
+    font-size: 1.2em;
+}
+.collapsible.closed::after {
+    content: " ... ";
+    font-size: 1.5em;
+}
+
+.show-bottom .level0.initial:after {
+    content: "\A        ? ..." !important;
+    white-space: pre;
+}
+
+#search {
+  display: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-to-unity-group {
+  margin-left: 15px;
+  color: white;
+}
+
+.back-to-unity {
+  color: white;
+  background: url(../styles/sprites.png) right -112px no-repeat;
+  padding: 0 31px 0 0;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
+
+.back-to-unity:hover {
+  color: #2196f3;
+}
+
+/* Unity accessibility */
+.declaration, .fieldValue, .parameters, .returns {
+  color: #4C4C4C;
+}
+
+/* WEBDOCS-1037: Hotfix logo */
+img#logo {
+  width: 100%;
+  height: 100%;
+}

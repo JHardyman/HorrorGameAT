@@ -1,0 +1,25 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Global Namespace
+  name: ''
+  href: api/Global%20Namespace.html
+- uid: Global Namespace.PRXTests
+  name: PRXTests
+  href: api/Global%20Namespace.PRXTests.html
+  commentId: T:Global Namespace.PRXTests
+  fullName: PRXTests
+  nameWithType: PRXTests
+- uid: Global Namespace.PRXTests.PRXOnlyForPS5(UnityEditor.PluginImporter)
+  name: PRXOnlyForPS5(PluginImporter)
+  href: api/Global%20Namespace.PRXTests.html#Global_Namespace_PRXTests_PRXOnlyForPS5_UnityEditor_PluginImporter_
+  commentId: M:Global Namespace.PRXTests.PRXOnlyForPS5(UnityEditor.PluginImporter)
+  fullName: PRXTests.PRXOnlyForPS5(UnityEditor.PluginImporter)
+  nameWithType: PRXTests.PRXOnlyForPS5(PluginImporter)
+- uid: Global Namespace.PRXTests.PRXOnlyForPS5*
+  name: PRXOnlyForPS5
+  href: api/Global%20Namespace.PRXTests.html#Global_Namespace_PRXTests_PRXOnlyForPS5_
+  commentId: Overload:Global Namespace.PRXTests.PRXOnlyForPS5
+  isSpec: "True"
+  fullName: PRXTests.PRXOnlyForPS5
+  nameWithType: PRXTests.PRXOnlyForPS5

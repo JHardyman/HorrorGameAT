@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting started | PS5 Audio Spatializer Plugin </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting started | PS5 Audio Spatializer Plugin ">
+      <meta name="generator" content="docfx 2.70.0 via com.unity.package-manager-doctools@3.9.3-preview on Monday, July 20, 2026">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/icons.css">
+      <link rel="stylesheet" href="../styles/unity.legal.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+      <meta property="unity:packageID" content="com.unity.spatializer.ps5">
+      <meta property="unity:packageTitle" content="PS5 Audio Spatializer Plugin | 0.0.22-preview">
+      <meta property="unity:copyTitle" content="Copy">
+      <meta property="unity:copyConfirmMessage" content="Copied">
+      <meta property="unity:copyIcon" content="">
+      <meta property="unity:copyConfirmIcon" content="">
+    
+    
+    <meta property="docfx:newtab" content="true">
+    <meta property="docfx:newtab" content="true">
+    <meta property="unity:image-zoom-threshold" content="1200">
+      <script type="text/javascript">thisPackageMetaData = { name: "com.unity.spatializer.ps5", version: "0.0.22-preview", displayTitle:"PS5 Audio Spatializer Plugin 0.0.22-preview", lang: "en" };</script>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+                <div class="back-to-unity-group">
+                  <a class="back-to-unity" href="">docs.unity3d.com</a>
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../manual/index.html" title="Manual">Manual</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="Scripting API">Scripting API</a>
+                      </li>
+                      <li>
+                          <a href="../changelog/CHANGELOG.html" title="Changelog">Changelog</a>
+                      </li>
+                      <li>
+                          <a href="../license/LICENSE.html" title="License">License</a>
+                      </li>
+                </ul>            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="index.html" title="PS5 spatializer plug-in" class="">PS5 spatializer plug-in</a>
+                    </li>
+                    <li class="active">
+                      <a href="gettingstarted.html" title="Getting started" class="active">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="sample.html" title="Using the sample project" class="">Using the sample project</a>
+                    </li>
+                    <li class="">
+                      <a href="bestpractices.html" title="Best practices and considerations" class="">Best practices and considerations</a>
+                    </li>
+                  </ul>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started">Getting started</h1>
+
+<p>The steps below outline how to set up your project to be able to use spatialized audio in your PlayStation 5 (PS5) title.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="unity-version">Unity version</h3>
+<ul>
+<li>This version of the PS5 spatializer package is compatible with Unity Editor 2020.3 and later.</li>
+<li>Install the package using the <a href="https://docs.unity3d.com/Manual/upm-ui-tarball.html">Add package from tarball</a> option in the package manager.</li>
+</ul>
+<h2 id="setting-up-a-basic-scene">Setting up a basic scene</h2>
+<p>Note: The following steps require a simple scene containing at least a <a href="https://docs.unity3d.com/Manual/GameObjects.html">GameObject</a> with an attached <a href="https://docs.unity3d.com/Manual/class-AudioSource.html">audio source</a>.</p>
+<p>To set up spatialized audio in a project:</p>
+<ol>
+<li><p>Select the Spatializer plug-in from the Project Settings audio options:</p>
+<ul>
+<li>Navigate to <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Audio</strong>.</li>
+<li>Set the <strong>Spatializer Plugin</strong> option to <strong>PS5AudioSpatializer</strong>.</li>
+</ul>
+<p><img src="images/setaudioplugin.png" alt=""></p>
+</li>
+<li><p>Add an <a href="https://docs.unity3d.com/Manual/AudioMixer.html">audio mixer</a> to the project to allow direct control of the audio output from your audio sources.</p>
+<ul>
+<li>Navigate to <strong>Window</strong> &gt; <strong>Audio</strong> &gt; <strong>Audio Mixer</strong>.</li>
+<li>To add a mixer to the mixers list, select the <strong>Add</strong> (+) button.</li>
+<li>Provide a name for your mixer.</li>
+</ul>
+<p>A new mixer appears in the Audio Mixer window.</p>
+<p><img src="images/addmixer.png" alt=""></p>
+</li>
+<li><p>Add an audio mixer group to specify a separate audio channel for the spatialized audio to pass through. This channel will be used when testing 3D audio in the Editor and when applying effects to your 3D audio when running on device.</p>
+<ul>
+<li>Navigate to <strong>Window</strong> &gt; <strong>Audio</strong> &gt; <strong>Audio Mixer</strong>.</li>
+<li>Select the <strong>Add</strong> (+) button to create a new mixer group in the <strong>Groups</strong> section.</li>
+<li>Provide a group name for your audio mixer.</li>
+</ul>
+<p><img src="images/childmixer.png" alt=""></p>
+<p>The new audio mixer group will appear next to the Master group in the audio mixer window.</p>
+</li>
+<li><p>Add the <code>PS5SpatializerMixer</code> mixer effect to the newly created mixer group.</p>
+<p><strong>Note</strong>: This ensures that this mixer only handles the audio data passed through from the <strong>Spatial Blend</strong> option on the audio source.
+On the mixer group controller:</p>
+<ul>
+<li>Select <strong>Add Effect</strong> from the inspector window.</li>
+</ul>
+<p><img src="images/addeffect.png" alt=""></p>
+<ul>
+<li>Select <strong>PS5SpatializerMixer</strong> from the drop-down list.</li>
+</ul>
+</li>
+<li><p>Enable the <strong>Spatialize</strong> option on an audio source you wish to pass into the PS5 3D object audio system.</p>
+<p><img src="images/spatialize.png" alt=""></p>
+<p><strong>Note</strong>: The spatialize option only appears on an audio source when a <strong>Spatializer Plugin</strong> option is selected in the project's audio settings.</p>
+<p><strong>Tip</strong>: You can also enable the spatializer for an Audio Source through a C# script, using the <a href="https://docs.unity3d.com/ScriptReference/AudioSource-spatialize.html"><code>AudioSource.spatialize</code></a> property.</p>
+</li>
+<li><p>On the audio source, set the <strong>Output</strong> option to the mixer group with the added <strong>PS5SpatializerEffect</strong> effect in the inspector window.</p>
+<p><img src="images/selectoutput.png" alt=""></p>
+</li>
+<li><p>Set the desired spatial blend on a spatialized Audio Source. The Unity audio system can retain a percentage of the spatialized audio source using the <strong>SpatialBlend</strong> option.</p>
+<p><img src="images/spatialblend.png" alt=""></p>
+<ul>
+<li>A value of 1 passes 100% of the audio through to the PS5 3D object audio system.</li>
+<li>A value of 0.5 would give 50% of the available audio to the PS5 3D object audio system and 50% to the Unity audio system.</li>
+</ul>
+<p><strong>Tip</strong>: You can also set the spatial blend property of an Audio Source through a C# script, using the <a href="https://docs.unity3d.com/ScriptReference/AudioSource-spatialBlend.html"><code>AudioSource.spatialBlend</code></a> property.</p>
+</li>
+</ol>
+<h2 id="adding-reverb-to-spatialized-audio-sources">Adding reverb to spatialized audio sources</h2>
+<p>Use the optional steps below to enhance spatialized audio in your title.</p>
+<h3 id="adding-a-reverb-effect">Adding a reverb effect</h3>
+<p>You can add effects to your spatialized audio sources by sending  a portion of the audio signal using the Spatial Blend property (as described above) to the Unity mixer. This portion of the signal can be processed with effects such as reverb.</p>
+<p>While you can apply effects other than reverb in this way, the resulting sound when mixed with the portion of the signal sent to be spatialized might not sound as expected. It's recommended to only use a reverb effect on this channel.</p>
+<p>To add a reverb effect to your spatialized audio group mixer:</p>
+<ol>
+<li><p>Select <strong>Add Effect</strong>.</p>
+</li>
+<li><p>Select <strong>SFX Reverb</strong>.</p>
+<p>The reverb effect applies to your spatialized audio group mixer.</p>
+<p><img src="images/addedreverbeffect.png" alt=""></p>
+</li>
+<li><p>Select the child audio group mixer as the output for each audio source if you wish to apply the reverb effect.</p>
+</li>
+</ol>
+<p><strong>Warning</strong>: When running your game in the Editor, the Editor is used as the mixer channel to output your 3D audio sources. When running your game on the device, only a portion of your audio sources configured by the spatial blend is passed here, and the PS5’s 3D audio systems process the rest. The resulting overall sound will differ when running on a PS5.</p>
+<h3 id="set-global-volume">Set global volume</h3>
+<p>Place the PS5SpatializerMixer effect on a mixer to enable the <strong>Global Volume</strong> option in the mixer inspector.</p>
+<p><img src="images/globalvolume.png" alt=""></p>
+<p>The Global Volume setting lets you control the volume of all spatialized audio passing through this mixer. It allows for more dynamic control, such as muting all spatialized audio in a scene. You can also expose this parameter using a script, and control using snapshots. For more information, see <a href="https://docs.unity3d.com/2023.1/Documentation/Manual/AudioMixerInspectors.html">AudioGroup Inspector</a>.</p>
+<h2 id="experience-3d-audio">Experience 3D audio</h2>
+<p>After following the above steps, when you enter the Play Mode, you can still experience audio in your scene. To experience the full 3D audio effect, you will need to create a build of your project and run this on your PS5 development kit.</p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="onetrust-inset">
+        
+      	
+      	Copyright © 2026 Unity Technologies &mdash; <a href="https://docs.unity3d.com/Manual/TermsOfUse.html">Trademarks and terms of use</a><br>
+              <ul class="unity-footer-menu-legal">
+                <li><a href="https://unity.com/legal">Legal</a></li>
+                <li><a href="https://unity.com/legal/privacy-policy">Privacy Policy</a></li>
+                <li><a href="https://unity.com/legal/cookie-policy">Cookie Policy</a></li>
+                <li><a href="https://unity.com/legal/do-not-sell-my-personal-information">Do Not Sell or Share My Personal Information</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="../styles/PMDT.js"></script>
+    <script type="text/javascript" src="../styles/mermaid.min.js"></script>
+    <script type="module">
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script id="MathJax-script" async="" src="../styles/mathjax/tex-chtml.js"></script>  </body>
+</html>

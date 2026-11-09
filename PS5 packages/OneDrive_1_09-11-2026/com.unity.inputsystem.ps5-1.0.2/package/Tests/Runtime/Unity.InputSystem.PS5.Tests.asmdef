@@ -1,0 +1,37 @@
+{
+    "name": "Unity.InputSystem.PS5.Tests",
+    "rootNamespace": "",
+    "references": [
+        "Unity.InputSystem",
+        "Unity.InputSystem.PS5",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "PS5"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [
+        {
+            "name": "Unity",
+            "expression": "6000.0.0b12",
+            "define": "UNITY_PS5_ENHANCED_INPUT_SYSTEM"
+        },
+        {
+            "name": "Unity",
+            "expression": "6000.1.0a5",
+            "define": "UNITY_SUPPORT_ANGVEL_DEADBAND_STATE"
+        }
+    ],
+    "noEngineReferences": false
+}

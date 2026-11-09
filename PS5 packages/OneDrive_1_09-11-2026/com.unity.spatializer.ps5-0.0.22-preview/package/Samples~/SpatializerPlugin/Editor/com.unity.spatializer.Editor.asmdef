@@ -1,0 +1,30 @@
+{
+    "name": "com.unity.spatializer.editor",
+    "rootNamespace": "",
+    "references": [
+        "Cinemachine",
+        "Unity.InputSystem.PS5"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.cinemachine",
+            "expression": "2.1.0",
+            "define": "CINEMACHINE_PACKAGE_DETECTED"
+        },
+        {
+            "name": "com.unity.inputsystem.ps5",
+            "expression": "0.1.0-preview",
+            "define": "INPUTSYSTEM_PS5_PACKAGE_DETECTED"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Unity.PlatformToolkit.PS5.Editor",
+    "rootNamespace": "Unity.PlatformToolkit.PS5.Editor",
+    "references": [
+        "Unity.PlatformToolkit.Editor",
+        "Unity.PlatformToolkit",
+        "Unity.PlatformToolkit.PS5.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

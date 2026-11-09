@@ -1,0 +1,27 @@
+{
+    "name": "Unity.PlatformToolkit.PS5.Runtime",
+    "rootNamespace": "Unity.PlatformToolkit.PS5",
+    "references": [
+        "Unity.PSN.PS5.Runtime",
+        "Unity.SaveData.PS5.Runtime",
+        "Unity.CommonDialog.PS5.Runtime",
+        "Unity.PlatformToolkit",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "PS5"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        ""
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_PS5"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

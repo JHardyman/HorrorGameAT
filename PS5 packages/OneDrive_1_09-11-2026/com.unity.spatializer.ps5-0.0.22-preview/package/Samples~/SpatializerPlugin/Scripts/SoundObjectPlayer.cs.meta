@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c250df889196a4d46b67fd8e6309d8b4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - soundObjectPrefab: {instanceID: 0}
+  - mixerSnapshotReverbEnabled: {instanceID: 0}
+  - mixerSnapshotReverbDisabled: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
